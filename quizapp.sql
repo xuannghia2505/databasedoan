@@ -158,10 +158,55 @@ select q.*,uq.score
 from User_Quiz as uq join Quiz as q on uq.quizID=q.quizID
 where username='nghia1'	
 
-select * from Question
+
 
 update Question
 set question='1+1=',answerA='1',answerB='2',answerC='8',answerD='4',correctAnswer='B',image=null,audio=null,quizID='1'
 where questionID=1 
 
 select * from Account
+
+delete from Question
+where quizID=20
+delete from Quiz
+where quizID=20 
+
+update Question
+set answerC=REPLACE(answerC,'https://kenh14cdn.com/thumb_w/660/2018/8/2/3828757811363316665194108445855606203482112n-15332036550891407670224.jpg','images/16/may.jpg')
+where quizID=16
+update Question
+set answerC=REPLACE(answerC,'https://image.thanhnien.vn/w660/Uploaded/2022/bozngu/2021_09_07/mua_giong_2_boka.jpg','images/16/mua.jpg')
+where quizID=16
+update Question
+set answerC=REPLACE(answerC,'https://24hthongtin.com/img_data/images/tim-hieu-ve-mat-trang-nguoi-ban-dong-hanh-cua-trai-dat.jpg','images/16/mattrang.jpg')
+where quizID=16
+update Question
+set answerC=REPLACE(answerC,'https://e7.pngegg.com/pngimages/3/446/png-clipart-cartoon-chibi-sun-leaf-text.png','images/16/mattroi.jpg')
+where quizID=16
+update Question
+set answerC=REPLACE(answerC,'https://hauvuong.mobi/ngoi-sao-la-gi/imager_3844.jpg','images/16/sao.jpg')
+where quizID=16
+update Question
+set answerC=REPLACE(answerC,'https://s.meta.com.vn/img/thumb.ashx/Data/image/2021/08/23/cau-vong-1.jpg','images/16/cauvong.jpg')
+where quizID=16
+
+
+update Question
+set image=REPLACE(answerD,'images','/images')
+where quizID=3
+
+select * from Question
+where quizID=13
+
+update Question
+set question=?,answerA=?,answerB=?,answerC=?,answerD=?,correctAnswer=?,quizID=?
+where questionID=?
+
+update Question
+set question=?,correctAnswer=?,image=?,quizID=?
+where questionID=?
+
+update Question
+set answerA=?,answerB=?,answerC=?,answerD=?,correctAnswer=?,audio=?,quizID=?
+where questionID=?
+
